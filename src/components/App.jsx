@@ -7,7 +7,7 @@ import { NotFoundPage } from "../pages/NotFoundPage/NotFoundPage";
 import { Catalog } from "../pages/Catalog/Catalog";
 
 
-import { About } from "../pages/About/About";
+import { Favorites } from "../pages/Favorites/Favorites";
 import { Products } from "../pages/Products.jsx/Products";
 
 import { Container, Header, Logo, Link } from "./App.styled";
@@ -25,7 +25,7 @@ export const App = () => {
         <nav>
           <Link to="/catalog">Catalog</Link>
           <Link to="/" end>Home</Link>
-          <Link to="/about">About</Link>
+          <Link to="/favorites">Favorites</Link>
           <Link to="/products">Products</Link>
         </nav>
       </Header>
@@ -33,7 +33,7 @@ export const App = () => {
        
         <Route path="/" element={<HomePage />} />
         <Route path="/catalog" element={<Catalog />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/favorites" element={<Favorites />} />
         <Route path="/products" element={<Products />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />

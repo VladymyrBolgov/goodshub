@@ -3,13 +3,35 @@ import React from "react";
 export const HomePage = () => {
     return (
         <main>
-            <h1>Welcome</h1>
+            <h1>Promotional offers</h1>
                 <img src="https://via.placeholder.com/960x240" alt="" />
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto,
-                    laboriosam placeat incidunt rem illum animi nemo quibusdam quia
-                    voluptatum voluptate. ghyjtyjctf
-                </p>
+                <ol>Стиральные машины
+                    <li>Лж</li>
+                    <li>Самсунг</li>
+                    <li>Индезит</li>
+                    <li>Аристон</li>
+                </ol>
+                    <br></br>
+                <ol>Стиральные машины
+                    <li>Лж</li>
+                    <li>Самсунг</li>
+                    <li>Индезит</li>
+                    <li>Аристон</li>
+            </ol>
+                    <br></br>
+            <ol>Стиральные машины
+                    <li>Лж</li>
+                    <li>Самсунг</li>
+                    <li>Индезит</li>
+                    <li>Аристон</li>
+                </ol>
+                    <br></br>
+                <ol>Стиральные машины
+                    <li>Лж</li>
+                    <li>Самсунг</li>
+                    <li>Индезит</li>
+                    <li>Аристон</li>
+                </ol>
         </main>
     )
 }
