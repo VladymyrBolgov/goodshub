@@ -20,7 +20,8 @@ export const App = () => {
           <span role="img" aria-label="computer icon">
             💻
           </span>{" "}
-          GoodsHub
+          <Link to="/" end>GoodsHub</Link>
+          
         </Logo>
         <nav>
           <Link to="/catalog">Catalog</Link>
