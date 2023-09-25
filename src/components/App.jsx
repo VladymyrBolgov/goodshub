@@ -1,16 +1,45 @@
+import { Routes, Route } from "react-router-dom";
+
+import { HomePage } from "../pages/HomePage/HomePage";
+import {RegisterPage} from "../pages/RegisterPage/RegisterPage"
+import { LoginPage } from "../pages/LoginPage/LoginPage";
+import { NotFoundPage } from "../pages/NotFoundPage/NotFoundPage";
+import { Catalog } from "../pages/Catalog/Catalog";
+
+
+import { About } from "../pages/About/About";
+import { Products } from "../pages/Products.jsx/Products";
+
+import { Container, Header, Logo, Link } from "./App.styled";
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      GoodsHub Marketplace
-    </div>
+    <Container>
+       <Header>
+        <Logo>
+          <span role="img" aria-label="computer icon">
+            💻
+          </span>{" "}
+          GoodsHub
+        </Logo>
+        <nav>
+          <Link to="/catalog">Catalog</Link>
+          <Link to="/" end>Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/products">Products</Link>
+        </nav>
+      </Header>
+      <Routes>
+       
+        <Route path="/" element={<HomePage />} />
+        <Route path="/catalog" element={<Catalog />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="*" element={<NotFoundPage/>} /> 
+       
+      </Routes>
+    </Container>
   );
 };
