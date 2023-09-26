@@ -22,8 +22,8 @@ export const App = () => {
           </span>{" "}
           <Link to="/" end>GoodsHub</Link>
         </Logo>
+        <Link to="/catalog">Catalog</Link>
         <nav>
-          <Link to="/catalog">Catalog</Link>
           {/* <Link to="/" end>Home</Link> */}
           <Link to="/login">Login</Link>
           <Link to="/messages">Messages</Link>
