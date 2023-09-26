@@ -21,7 +21,6 @@ export const App = () => {
             💻
           </span>{" "}
           <Link to="/" end>GoodsHub</Link>
-          
         </Logo>
         <nav>
           <Link to="/catalog">Catalog</Link>
@@ -31,7 +30,6 @@ export const App = () => {
         </nav>
       </Header>
       <Routes>
-       
         <Route path="/" element={<HomePage />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/favorites" element={<Favorites />} />
@@ -39,7 +37,6 @@ export const App = () => {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<NotFoundPage/>} /> 
-       
       </Routes>
     </Container>
   );
