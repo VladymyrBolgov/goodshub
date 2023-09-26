@@ -5,10 +5,8 @@ import {RegisterPage} from "../pages/RegisterPage/RegisterPage"
 import { LoginPage } from "../pages/LoginPage/LoginPage";
 import { NotFoundPage } from "../pages/NotFoundPage/NotFoundPage";
 import { Catalog } from "../pages/Catalog/Catalog";
-
-
 import { Favorites } from "../pages/Favorites/Favorites";
-import { Products } from "../pages/Products.jsx/Products";
+import { Basket } from "../pages/Basket.jsx/Basket";
 
 import { Container, Header, Logo, Link } from "./App.styled";
 
@@ -25,17 +23,19 @@ export const App = () => {
         <nav>
           <Link to="/catalog">Catalog</Link>
           <Link to="/" end>Home</Link>
+          <Link to="/login">Login</Link>
           <Link to="/favorites">Favorites</Link>
-          <Link to="/products">Products</Link>
+          <Link to="/basket">Basket</Link>
         </nav>
       </Header>
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/catalog" element={<Catalog />} />
-        <Route path="/favorites" element={<Favorites />} />
-        <Route path="/products" element={<Products />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/basket" element={<Basket />} />
         <Route path="*" element={<NotFoundPage/>} /> 
       </Routes>
     </Container>
