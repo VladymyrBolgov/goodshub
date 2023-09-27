@@ -23,6 +23,7 @@ export const App = () => {
           <Link to="/" end>GoodsHub</Link>
         </Logo>
         <Link to="/catalog">Catalog</Link>
+        
         <nav>
           {/* <Link to="/" end>Home</Link> */}
           <Link to="/login">Login</Link>
