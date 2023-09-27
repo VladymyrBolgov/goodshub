@@ -42,7 +42,7 @@ export const GoodsHub = () => {
             <br></br>
             <br></br>
             <footer>
-                <h2>Logo</h2>
+                <h2>Logo GoodsHub</h2>
                 <br></br>
                 <p>Privacy Policy</p>
                 <p>Help&FAQ</p>

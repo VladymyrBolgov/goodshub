@@ -7,7 +7,7 @@ import { LoginPage } from "../pages/LoginPage/LoginPage";
 import { RegisterPage } from "../pages/RegisterPage/RegisterPage"
 import { Messages } from "../pages/Messages/Messages";
 import { Favorites } from "../pages/Favorites/Favorites";
-import { Basket } from "../pages/Basket.jsx/Basket";
+import { Basket } from "../pages/Basket/Basket";
 import { NotFoundPage } from "../pages/NotFoundPage/NotFoundPage";
 
 import { Container, Header, Logo, Link } from "./App.styled";
@@ -36,6 +36,7 @@ export const App = () => {
         {/* <Route path="/" element={<HomePage />} /> */}
         <Route path="/" element={<GoodsHub />} />
         <Route path="/catalog" element={<Catalog />} />
+        <Route path="/catalog/:catalogId" element={<div>Catalog collection</div>} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/messages" element={<Messages />} />
