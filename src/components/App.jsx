@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import { Catalog } from "../pages/Catalog/Catalog";
+import { ProductDetails } from "../pages/Catalog/ProductDetails";
 // import { HomePage } from "../pages/HomePage/HomePage";
 import { GoodsHub} from "../pages/GoodsHub/GoodsHub";
 import { LoginPage } from "../pages/LoginPage/LoginPage";
@@ -37,7 +38,8 @@ export const App = () => {
         {/* <Route path="/" element={<HomePage />} /> */}
         <Route path="/" element={<GoodsHub />} />
         <Route path="/catalog" element={<Catalog />} />
-        <Route path="/catalog/:catalogId" element={<div>Catalog collection</div>} />
+        {/* <Route path="/catalog/:catalogId" element={<div>ProductDetails</div>} /> */}
+        <Route path="/catalog/:id" element={<ProductDetails />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/messages" element={<Messages />} />
