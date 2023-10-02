@@ -14,8 +14,8 @@ export const Header = styled.header`
   gap: 12px;
   padding: 8px 0;
   margin-bottom: 16px;
-  border-bottom: 1px solid black;
-
+  background-color: #D6D6D6;
+  
   > nav {
     display: flex;
   }
@@ -35,6 +35,6 @@ export const Link = styled(NavLink)`
 
   &.active {
     color: white;
-    background-color: orangered;
+    /* background-color: orangered; */
   }
 `;
