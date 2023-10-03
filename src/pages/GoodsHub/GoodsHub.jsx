@@ -1,43 +1,27 @@
 import React from "react";
+import { getProducts } from "../../fakeHomeAPI";
+import { ProductList } from "../../components/ProductList/ProductList";
 
 export const GoodsHub = () => {
+    const products = getProducts();
     return (
         <main>
-           
-            <br></br>
+                    <br></br>
             <img src="https://via.placeholder.com/960x240" alt="" />
-            <h2>Promotional offers</h2>
-            <br></br>
-                <ol>Стиральные машины
-                    <li>Лж</li>
-                    <li>Самсунг</li>
-                    <li>Индезит</li>
-                    <li>Аристон</li>
-                    <li>Бош</li>
-                    <li>Сименс</li>
-                </ol>
                     <br></br>
-            <h2>Hot new products</h2>
+            <main>
+                <h2>Promotional offers</h2>
                     <br></br>
-                <ol>Стиральные машины
-                    <li>Лж</li>
-                    <li>Самсунг</li>
-                    <li>Индезит</li>
-                    <li>Аристон</li>
-                    <li>Бош</li>
-                    <li>Сименс</li>
-                </ol>
+                <ProductList products={products} />
                     <br></br>
-            <h2>More products to choose from</h2>
+                <h2>Hot new products</h2>
                     <br></br>
-                 <ol>Стиральные машины
-                    <li>Лж</li>
-                    <li>Самсунг</li>
-                    <li>Индезит</li>
-                    <li>Аристон</li>
-                    <li>Бош</li>
-                    <li>Сименс</li>
-                </ol>
+                <ProductList products={products} />
+                    <br></br>
+                <h2>More products to choose from</h2>
+                    <br></br>
+                <ProductList products={products} />
+            </main>
             <br></br>
             <br></br>
             <br></br>
