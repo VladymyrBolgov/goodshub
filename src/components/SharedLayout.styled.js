@@ -14,7 +14,7 @@ export const Header = styled.header`
   gap: 12px;
   padding: 8px 0;
   margin-bottom: 16px;
-  background-color: #D6D6D6;
+  background-color: #CCD5FA;
   
   > nav {
     display: flex;
@@ -30,11 +30,11 @@ export const Link = styled(NavLink)`
   padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;
-  color: black;
+  color: #F76800;
   font-weight: 500;
 
   &.active {
-    color: white;
+    color: black;
     /* background-color: orangered; */
   }
 `;

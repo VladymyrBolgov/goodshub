@@ -19,7 +19,7 @@ code {
 /* @import-normalize; bring in normalize.css styles */
 
 body {
-  background-color: #fdf7f2;
+  /* background-color: #fdf7f2; */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Manrope', 'Montserrat',
     'Inter', 'Poppins' sans-serif;
