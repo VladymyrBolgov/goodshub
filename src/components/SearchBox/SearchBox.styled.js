@@ -12,14 +12,14 @@ export const Input = styled.input`
   padding-left: 30px;
   border-radius: 4px 0 0 4px;
   width: 476px;
-  height: 44px;
+  height: 40px;
   font: inherit;
 `;
 
 export const Button = styled.button`
  border-radius: 0 4px 4px 0 ;
  width: 76px;
- height: 49px;
+ height: 45px;
  background-color: #1A43E7;
  cursor: pointer;
 `;
