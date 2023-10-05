@@ -3,7 +3,7 @@ const products = [
     { id: "h-2", name: "Hoodie 2" },
     { id: "h-3", name: "Hoodie 3" },
     { id: "h-4", name: "Hoodie 4" },
-    // { id: "h-5", name: "Hoodie 5" },
+    { id: "h-5", name: "Hoodie 5" },
     // { id: "h-6", name: "Hoodie 6" },
     // { id: "s-1", name: "Sneakers 1" },
     // { id: "s-2", name: "Sneakers 2" },
