@@ -30,3 +30,12 @@ export const SharedLayout = () => {
       </Container>
     );
   };
+
+// export const SharedLayout = () => {
+//     return (
+//       <>
+//       <Header />
+//       <Outlet />
+//     </>
+//     );
+//   };

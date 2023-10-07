@@ -7,7 +7,7 @@ export const GoodsHub = () => {
     return (
         <main>
                     <br></br>
-            <img src="https://via.placeholder.com/960x240" alt="" />
+            <img src="https://via.placeholder.com/876x320" alt="" />
                     <br></br>
             <main>
                 <h2>Promotional offers</h2>
