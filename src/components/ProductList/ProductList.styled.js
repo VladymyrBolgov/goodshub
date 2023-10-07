@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  padding: 0 130px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, 175px);
+  gap: 24px;
 `;
 
 export const CardWrapper = styled.div`
