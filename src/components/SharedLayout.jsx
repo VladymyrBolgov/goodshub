@@ -2,6 +2,7 @@ import { useSearchParams } from "react-router-dom";
 import { Outlet } from 'react-router-dom';
 import { Container, Header, Logo, Link } from './SharedLayout.styled';
 import { SearchBox } from './SearchBox/SearchBox';
+
 import { MdOutlineShoppingBasket } from 'react-icons/md';
 import { GrFavorite } from 'react-icons/gr';
 import { BsChatLeft } from 'react-icons/bs';
