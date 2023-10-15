@@ -31,6 +31,7 @@ export const SharedLayout = () => {
             <Link to="/basket"><MdOutlineShoppingBasket /></Link>
           </nav>
         </Header>
+        
         <Outlet />
       </Container>
     );
