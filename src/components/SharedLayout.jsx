@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { Container, Header, Logo, Link } from './SharedLayout.styled';
 import { SearchBox } from './SearchBox/SearchBox';
 
+import {GiHamburgerMenu} from 'react-icons/gi'
 import { MdOutlineShoppingBasket } from 'react-icons/md';
 import { GrFavorite } from 'react-icons/gr';
 import { BsChatLeft } from 'react-icons/bs';
@@ -22,6 +23,7 @@ export const SharedLayout = () => {
           <Logo>
             <Link to="/" end>GoodsHub</Link>
           </Logo>
+          <Link to="/menu"><GiHamburgerMenu /></Link>
           <Link to="/catalog">Catalog</Link>
           <SearchBox value={productName} onChange={updateQueryString} />
           <nav>
