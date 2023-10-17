@@ -33,8 +33,9 @@ export const Header = styled.header`
   gap: 12px;
   margin-bottom: 16px;
   padding: 0 130px;
+  padding: 0 105px 0 130px;
   background-color: #CCD5FA;
-  
+
   > nav {
     display: flex;
   }
@@ -53,6 +54,7 @@ export const Link = styled(NavLink)`
   text-decoration: none;
   color: #F76800;
   font-weight: 700;
+
 
   &.active {
     color: black;

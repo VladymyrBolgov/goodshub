@@ -1,30 +1,36 @@
 import React from "react";
 import { getProducts } from "../../fakeHomeAPI";
 import { ProductList } from "../../components/ProductList/ProductList";
+import { Container } from "./GoodsHab.styled";
+import {StyledTitle, BoxImg} from "./GoodsHab.styled"
 
 export const GoodsHub = () => {
     const products = getProducts();
     return (
         <main>
-                    <br></br>
-            <img src="https://via.placeholder.com/1176x400" alt="" />
-                    <br></br>
-            <main>
-                <h2>Promotional offers</h2>
-                    <br></br>
+             <Container>
+                
+                <BoxImg>
+                    <img src="https://via.placeholder.com/1176x400" alt="" />
+                </BoxImg>
+                  
+            
+                <StyledTitle>Promotional offers</StyledTitle>
+                    
                 <ProductList products={products} />
-                    <br></br>
-                <h2>Hot new products</h2>
-                    <br></br>
+                    
+                <StyledTitle>Hot new products</StyledTitle>
+                    
                 <ProductList products={products} />
-                    <br></br>
-                <h2>More products to choose from</h2>
-                    <br></br>
+                   
+                <StyledTitle>More products to choose from</StyledTitle>
+                   
                 <ProductList products={products} />
-            </main>
+            
             <br></br>
             <br></br>
             <br></br>
+            
             <footer>
                 <h2>Logo GoodsHub</h2>
                 <br></br>
@@ -36,7 +42,7 @@ export const GoodsHub = () => {
                 <br></br>
                 <p>© 2023 GoodsHub. All rights reserved.</p>
             </footer>
-             
+         </Container>    
         </main>
     )
 }
