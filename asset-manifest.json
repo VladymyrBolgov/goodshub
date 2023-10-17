@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/goodshub/static/css/main.c40e5395.css",
-    "main.js": "/goodshub/static/js/main.62b4be16.js",
+    "main.js": "/goodshub/static/js/main.1334664b.js",
     "index.html": "/goodshub/index.html",
     "main.c40e5395.css.map": "/goodshub/static/css/main.c40e5395.css.map",
-    "main.62b4be16.js.map": "/goodshub/static/js/main.62b4be16.js.map"
+    "main.1334664b.js.map": "/goodshub/static/js/main.1334664b.js.map"
   },
   "entrypoints": [
     "static/css/main.c40e5395.css",
-    "static/js/main.62b4be16.js"
+    "static/js/main.1334664b.js"
   ]
 }
