@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+    {% block header %}
+
+    {% endblock %}
+
+
+    {% block urls %}
+
+              <li class="logo"><a href="{% url 'main_page' %}"><div class="logo"></div></a></li>
+              {% for m in menu %}
+		      <li><a href="{% url m.url_name %}">{{m.title}}</a></li>
+               {% endfor %}
+
+         <h3> Search </h3>
+              <form action="{% url 'main_page' %}">
+              <label><input type="text" name="search_text"></label>
+              <input type="submit" value="Search">
+              <form action="{% url 'main_page' %}"><button>Clear</button></form>
+              </form>
+              <br><br>
+
+    {% endblock %}
+
+
+{% block content %}
+    <div id="sidebar">
+    <ul id="left-chapters">
+        <h3>Categories</h3>
+             {% for category in categories %}
+             <li {% if category.slug == c.slug %}class="selected"{% endif %}>
+             <a href="{{ category.get_absolute_url }}">{{ category.name }}</a></li>
+      {% endfor %}
+    </ul>
+    </div>
+
+    <div>
+
+           <div id="product">
+           <h3>Hot new product</h3>
+              {% for product in product_list %}
+              <div class="item" style="float: left; position: relative; width: 3cm; margin: 1.66%; ">
+              <a href="{{ product.get_absolute_url }}">{{ product.title }} <br>
+              <img style="max-width: 100px; max-height: 100px" src="{% if product.image %}{{ product.image.url }}
+              {% else %} {% static "img/no_image.png" %}
+              {% endif %}"></a><br>
+              ${{ product.price }}<br><br></div>
+              {% endfor %}
+           </div>
+
+           <div id="promotional">
+           <h3>Promotional offers</h3>
+              {% for product in product_list %}
+              {% if product.promotion == True %}
+              <div class="item" style="float: left; position: relative; width: 12%; margin: 1.66%; ">
+              <a href="{{ product.get_absolute_url }}">{{ product.title }}<br>
+              <img style="max-width: 100px; max-height: 100px" src="{% if product.image %}{{ product.image.url }}
+              {% else %} {% static "img/no_image.png" %}
+              {% endif %}"></a><br>
+              ${{ product.price }}<br><br></div>
+              {% endif %}
+              {% endfor %}
+           </div>
+
+    </div>
+
+{% endblock %}
+
+
+ {% block pagination %}
+ {% endblock %}
+

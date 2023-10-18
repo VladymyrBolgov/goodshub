@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+ {% block content %}
+     <div>
+     <h2> Product details </h2>
+
+     <h1>{{ product.title }} </h1><br>
+     <img style="max-width: 300px; max-height: 300px" src="{% if product.image %}{{ product.image.url }}
+              {% else %} {% static "img/no_image.png" %}{% endif %}"><br>
+     <h3> {% if product.model %} Model: {{ product.model }} {% endif %}<br>
+          Descriptions: {{ product.description }} <br>
+          Price: ${{ product.price }} <br>
+          {% if product.quantity > 1 %} Quantity: {{ product.quantity }} {% endif %}<br>
+          Date of creation: {{ product.created |date:"d/M/Y"}}<br>
+          Seller: {{ product.seller }} <br>
+          Seller`s phone: {{ product.seller.phone_number }}<br>
+          Seller`s email: {{ product.seller.email }}<br>
+
+
+          {% if request.user == product.seller %}
+              <form method='post' action="{% url 'product:change_product' product.slug %}">
+              {% csrf_token %}
+              <input type="button" value="Change product"
+              onclick="window.location.href='{% url 'product:change_product' product.slug %}'">
+              </form>
+          {% endif %}
+
+          {% if request.user == product.seller %}
+              <form method='post' action="{% url 'product:delete_product' product.slug %}">
+              {% csrf_token %}
+              <input type="submit" value="Delete product">
+              </form>
+          {% endif %}
+
+          {% if request.user != product.seller %}
+              <form method='post' action="{% url 'favorites:create_favorites' product.slug %}">
+              {% csrf_token %}
+              <input type="submit" value="Add to favorites">
+              </form>
+          {% endif %}
+
+          {% if comments %}
+              <h3 style="color: red">Comments</h3>
+              {% for comment in comments %}
+              Content: {{ comment.content }}<br>
+              Author: {{ comment.author }}<br><br>
+              {% endfor %}
+          {% endif %}
+
+          {% if request.user != product.seller %}
+              <h3 style="color:darkorange">Add comment</h3>
+              <form action="{% url 'comment:create_comment' product.id%}" method="post">
+              {% csrf_token %}
+              {{ comment_form.as_p }}
+              <input type="submit" value="Add comment">
+              </form>
+          {% endif %}
+
+     </h3>
+     </div>
+
+    {% endblock %}
+
+ {% block pagination %}
+ {% endblock %}

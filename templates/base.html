@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Marketplace</title>
+</head>
+
+<body style="background-color:#6b98b6">
+    <div>
+        <h1 style="color:#ffaec9">Marketplace</h1>
+    </div>
+
+    {% block header %}
+    {% endblock %}
+
+
+    {% block urls %}
+              <li class="logo"><a href="{% url 'main_page' %}"><div class="logo"></div></a></li>
+              {% for m in menu %}
+		      <li><a href="{% url m.url_name %}">{{m.title}}</a></li>
+               {% endfor %}
+    {% endblock %}
+
+
+    {% block massages %}
+             <div>
+              {% if messages %}
+              {% for message in messages %}
+              <h2 style="color: red"> {{ message }} </h2>
+              {% endfor %}
+              {% endif %}
+              </div>
+    {% endblock %}
+
+
+        {% block login %}
+          {% if user.is_authenticated and user.is_superuser == False %}
+              <h4>Hello {{ user.username }}</h4>
+                  <form action="{% url 'marketplace:logout' %}">
+                  <button type="submit">Logout</button>
+              </form>
+          {% endif %}
+
+           {% if user.is_superuser %}
+              <h4>Hello {{ user.username }}</h4>
+              <form action="{% url 'marketplace:logout' %}">
+                  <button type="submit">Logout</button>
+              </form>
+          {% endif %}
+
+             {% if user.is_anonymous %}
+              You are not logged in
+             {% endif %}
+          <br>
+
+        {% endblock %}
+
+
+    {% block content %}
+    {% endblock %}
+
+
+    {% block pagination %}
+            <div class="pagination">
+          <span class="step-links">
+          {% if page_obj.has_previous %}
+          <a href="?page=1">&laquo; first page</a>
+          <a href="?page={{ page_obj.previous_page_number }}">previous page</a>
+          {% endif %}
+          <span class="current">
+          Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+          </span>
+          {% if page_obj.has_next %}
+          <a href="?page={{ page_obj.next_page_number }}">next page</a>
+          <a href="?page={{ page_obj.paginator.num_pages }}">last page&raquo;</a>
+          {% endif %}
+          </span>
+     </div>
+    {% endblock %}
+
+
+</body>
+</html>

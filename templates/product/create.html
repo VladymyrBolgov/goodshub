@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2>Create new product</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+        <input type="submit" value="Create product">
+    </form>
+
+{% endblock %}
+
+ {% block pagination %}
+ {% endblock %}

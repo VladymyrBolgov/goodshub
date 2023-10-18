@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block header %}
+    <h2>Category</h2>
+    {% endblock %}
+
+
+{% block urls %}
+     <form method="get">
+        {{ sort }}
+        <input type="submit" value="Sort">
+    </form>
+ {% endblock %}
+
+  {% block content %}
+
+      {% for product in product_list %}
+              <div class="item" style="float: left; position: relative; width: 10%; margin: 1.66%; ">
+              <a href="{{ product.get_absolute_url }}">{{ product.title }}<br>
+              <img style="max-width: 100px; max-height: 100px" src="{% if product.image %}{{ product.image.url }}
+              {% else %} {% static "img/no_image.png" %}
+              {% endif %}"></a><br>
+              ${{ product.price }}<br><br></div>
+              {% endfor %}
+
+
+
+
+
+
+       {% for category in category_list %}
+        	{% if category.pk == category_selected %}
+		        <li class="selected">{{category.name}}</li>
+	        {% else %}
+		        <li><a href="{{ c.get_absolute_url }}">{{category.name}}</a></li>
+	        {% endif %}
+       {% endfor %}
+  {% endblock %}
+
+ {% block pagination %}
+ {% endblock %}
+
+
+

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <h3>List of favorites product</h3>
+
+    {% for favorites in favorites_list %}
+        <a href="{{ favorites.product.get_absolute_url }}">{{ favorites.product.title }} <br>
+              <img style="max-width: 100px; max-height: 100px" src="{% if favorites.product.image %}
+              {{ favorites.product.image.url }} {% else %} {% static "img/no_image.png" %}
+              {% endif %}"></a><br>
+              ${{ favorites.product.price }}<br><br>
+
+              <form method='post' action="{% url 'favorites:delete_favorites' favorites.id %}">
+              {% csrf_token %}
+              <input type="submit" value="Delete from favorites">
+              </form>
+              <br>
+    {% endfor %}
+
+{% endblock %}
+
+ {% block pagination %}
+ {% endblock %}
+
+
