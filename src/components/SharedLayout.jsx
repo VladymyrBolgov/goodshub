@@ -23,8 +23,8 @@ export const SharedLayout = () => {
           <Logo>
             <Link to="/" end>GoodsHub</Link>
           </Logo>
-          <Link to="/menu"><GiHamburgerMenu /></Link>
-          <Link to="/catalog">Catalog</Link>
+          {/* <Link to="/menu"><GiHamburgerMenu /></Link> */}
+          <Link to="/catalog"><GiHamburgerMenu />Catalog</Link>
           <SearchBox value={productName} onChange={updateQueryString} />
           <nav>
             <Link to="/login"><BsPerson /></Link>
