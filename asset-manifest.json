@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/goodshub/static/css/main.c40e5395.css",
-    "main.js": "/goodshub/static/js/main.48709064.js",
+    "main.css": "/goodshub/static/css/main.78307bd5.css",
+    "main.js": "/goodshub/static/js/main.3cbd449e.js",
     "index.html": "/goodshub/index.html",
-    "main.c40e5395.css.map": "/goodshub/static/css/main.c40e5395.css.map",
-    "main.48709064.js.map": "/goodshub/static/js/main.48709064.js.map"
+    "main.78307bd5.css.map": "/goodshub/static/css/main.78307bd5.css.map",
+    "main.3cbd449e.js.map": "/goodshub/static/js/main.3cbd449e.js.map"
   },
   "entrypoints": [
-    "static/css/main.c40e5395.css",
-    "static/js/main.48709064.js"
+    "static/css/main.78307bd5.css",
+    "static/js/main.3cbd449e.js"
   ]
 }
