@@ -1,7 +1,7 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import { Container } from "./Catalog.styled"
-import { Link, Outlet } from "react-router-dom";
+import { Link,} from "react-router-dom";
 import { NavLink } from 'react-router-dom';
 
 
