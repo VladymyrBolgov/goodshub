@@ -4,6 +4,6 @@ export const Container = styled.div`
  width: 1168px;
  height: 565px;
   margin: 0 132px;
-  background: tomato;
+  background: #FFF8DC;
   `;
   
