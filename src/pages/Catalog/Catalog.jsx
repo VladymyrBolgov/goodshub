@@ -24,7 +24,7 @@ export const Catalog = () => {
           <Link to="catalogs">Household appliances</Link>
         </li>
         <li>
-          <Link to="catalogs">TV and video equipment</Link>
+          <Link >TV and video equipment</Link>
         </li>
         </ul>
       </Container>
