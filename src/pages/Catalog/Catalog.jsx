@@ -1,18 +1,18 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import { Container } from "./Catalog.styled"
-import { Link,} from "react-router-dom";
+import { Link} from "react-router-dom";
 import { NavLink } from 'react-router-dom';
+// import { Catalogs } from "../Catalogs/Catalogs";
 
 
 export const Catalog = () => {
-
+  
   return (
     <main>
       <Container>
         <ul>
         <li>
-            <NavLink to="catalogs" > Computers and laptops</NavLink>
+            <NavLink to="/catalog/catalogs"> Computers and laptops</NavLink>
         </li>
         <li>
           <Link to="catalogs">Smartphones and Electronics</Link>
