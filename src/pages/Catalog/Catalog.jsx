@@ -18,13 +18,13 @@ export const Catalog = () => {
           <Link to="catalogs">Smartphones and Electronics</Link>
         </li>
         <li>
-          <Link >Game consoles and components</Link>
+          <Link to="catalogs">Game consoles and components</Link>
           </li>
           <li>
-          <Link >Household appliances</Link>
+          <Link to="catalogs">Household appliances</Link>
         </li>
         <li>
-          <Link >TV and video equipment</Link>
+          <Link to="catalogs">TV and video equipment</Link>
         </li>
         </ul>
       </Container>
