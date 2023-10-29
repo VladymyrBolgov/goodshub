@@ -1,4 +1,5 @@
-import { Suspense } from "react";
+// import { Suspense } from "react";
+
 import { useSearchParams } from "react-router-dom";
 import { Outlet } from 'react-router-dom';
 import { Container, Header, Logo, Link } from './SharedLayout.styled';
@@ -34,9 +35,9 @@ export const SharedLayout = () => {
             <Link to="/basket"><MdOutlineShoppingBasket /></Link>
           </nav>
         </Header>
-        <Suspense fallback={<div>Loading page...</div>}>
+        {/* <Suspense fallback={<div>Loading page...</div>}> */}
           <Outlet />
-        </Suspense>
+        {/* </Suspense> */}
       </Container>
     );
   };

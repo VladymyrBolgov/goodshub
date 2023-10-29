@@ -1,29 +1,30 @@
-import { lazy } from "react";
+// import { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
-// import { GoodsHub } from "../pages/GoodsHub/GoodsHub";
-// import { Catalog  } from "../pages/Catalog/Catalog";
-// import { Catalogs } from "../pages/Catalogs/Catalogs";
-// import { ProductDetails } from "../pages/Catalogs/ProductDetails";
-// import { LoginPage } from "../pages/LoginPage/LoginPage";
+import { GoodsHub } from "../pages/GoodsHub/GoodsHub";
+import { Catalog  } from "../pages/Catalog/Catalog";
+import { Catalogs } from "../pages/Catalogs/Catalogs";
+import { ProductDetails } from "../pages/Catalogs/ProductDetails";
+import { LoginPage } from "../pages/LoginPage/LoginPage";
       // import { RegisterPage } from "../pages/RegisterPage/RegisterPage"
-// import { Messages } from "../pages/Messages/Messages";
-// import { Favorites } from "../pages/Favorites/Favorites";
-// import { Basket } from "../pages/Basket/Basket";
-// import { NotFoundPage } from "../pages/NotFoundPage/NotFoundPage";
+import { Messages } from "../pages/Messages/Messages";
+import { Favorites } from "../pages/Favorites/Favorites";
+import { Basket } from "../pages/Basket/Basket";
+import { NotFoundPage } from "../pages/NotFoundPage/NotFoundPage";
 import { SharedLayout } from "./SharedLayout";
 
-const GoodsHub = lazy(() => import("../pages/GoodsHub/GoodsHub"));
-const Catalog = lazy(() => import("../pages/Catalog/Catalog"));
-const Catalogs = lazy(() => import("../pages/Catalogs/Catalogs"));
-const ProductDetails = lazy(() => import("../pages/Catalogs/ProductDetails"));
-const LoginPage = lazy(() => import("../pages/LoginPage/LoginPage"));
-const Messages = lazy(() => import("../pages/Messages/Messages"));
-const Favorites = lazy(() => import("../pages/Favorites/Favorites"));
-const Basket = lazy(() => import("../pages/Basket/Basket"));
-const NotFoundPage = lazy(() => import("../pages/NotFoundPage/NotFoundPage"));
+// const GoodsHub = lazy(() => import("../pages/GoodsHub/GoodsHub"));
+// const Catalog = lazy(() => import("../pages/Catalog/Catalog"));
+// const Catalogs = lazy(() => import("../pages/Catalogs/Catalogs"));
+// const ProductDetails = lazy(() => import("../pages/Catalogs/ProductDetails"));
+// const LoginPage = lazy(() => import("../pages/LoginPage/LoginPage"));
+// const Messages = lazy(() => import("../pages/Messages/Messages"));
+// const Favorites = lazy(() => import("../pages/Favorites/Favorites"));
+// const Basket = lazy(() => import("../pages/Basket/Basket"));
+// const NotFoundPage = lazy(() => import("../pages/NotFoundPage/NotFoundPage"));
 
 export const App = () => {
   return (
+ 
       <Routes>
         <Route path="/" element={<SharedLayout />} >
           <Route index element={<GoodsHub />} />
@@ -40,6 +41,7 @@ export const App = () => {
           <Route path="*" element={<NotFoundPage />} /> 
         </Route>
       </Routes>
+    
   );
 };
 
