@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const BoxImg = styled.div`
  padding: 0 130px;
- margin: 46px 0 0 0;
+ margin: 45px 0 0 0;
 `;
 
 
