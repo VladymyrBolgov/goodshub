@@ -3,6 +3,7 @@ import { Container, CardWrapper, ProductName } from "./ProductList.styled";
 
 export const ProductList = ({ products }) => {
   return (
+    
     <Container>
       {products.map((product) => (
         <CardWrapper key={product.id}>
